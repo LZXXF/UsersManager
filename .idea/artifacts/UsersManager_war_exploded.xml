@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="UsersManager:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/UsersManager_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="UsersManager/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="UsersManager" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="D:/oraclexe/app/oracle/product/11.2.0/server/jdbc/lib/ojdbc6.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
