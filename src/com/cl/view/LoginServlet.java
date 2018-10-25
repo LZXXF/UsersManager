@@ -12,10 +12,12 @@ public class LoginServlet extends HttpServlet {
         response.setContentType("text/html; charset = utf-8");
         response.setCharacterEncoding("utf-8");
         PrintWriter out = response.getWriter();
+
+        out.println("<img src = 'imgs/1.jpg'/><hr/>");
         out.println("<h1>user login</h1>");
         //action: /web application/Servlet
         out.println("<form action = '/UserManager/LoginClServlet' method = 'post'>");
-        out.println("user id: <input type = 'text' name = 'id'/><br/>");
+        out.println("user    id: <input type = 'text' name = 'id'/><br/>");
         out.println("password: <input type = 'password' name = 'password'/><br/>");
         out.println("<input type = 'submit' value = 'submit'/><br/>");
         out.println("</form>");
@@ -23,6 +25,8 @@ public class LoginServlet extends HttpServlet {
         if (errInfo != null) {
             out.println(request.getAttribute("err").toString());
         }
+        out.println("<hr/>");
+        out.println("<img src = 'imgs/2.jpg'/>");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
