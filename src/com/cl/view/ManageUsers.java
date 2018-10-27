@@ -51,8 +51,14 @@ public class ManageUsers extends HttpServlet {
                         "</td></tr>");
             }
             out.println("</table>");
+            if (pageNow != 1) {
+                out.println("<a href = '/UserManager/ManageUsers?pageNow=" + (pageNow - 1) + "'>previous</a>");
+            }
             for (int i = 1; i <= pageCount; i++) {
                 out.println("<a href = '/UserManager/ManageUsers?pageNow=" + i + "'><" + i + "></a>");
+            }
+            if (pageNow != pageCount) {
+                out.println("<a href = '/UserManager/ManageUsers?pageNow=" + (pageNow + 1) + "'>next</a>");
             }
         } catch (Exception e) {
             e.printStackTrace();
