@@ -1,5 +1,7 @@
 package com.cl.view;
 
+import com.cl.dao.SqlHelper;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -63,32 +65,7 @@ public class ManageUsers extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            if (rs != null) {
-                try {
-                    rs.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-            rs = null;
-
-            if (ps != null) {
-                try {
-                    ps.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-            ps = null;
-
-            if (ct != null) {
-                try {
-                    ct.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-            ct = null;
+            SqlHelper.close(rs, ps, ct);
         }
         out.println("<hr/><img src = 'imgs/2.jpg'/>");
     }
