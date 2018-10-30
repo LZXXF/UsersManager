@@ -19,6 +19,18 @@
         <servlet-name>ManageUsers</servlet-name>
         <servlet-class>com.cl.view.ManageUsers</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DeleteClServlet</servlet-name>
+        <servlet-class>com.cl.controller.DeleteClServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OK</servlet-name>
+        <servlet-class>com.cl.view.OK</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Error</servlet-name>
+        <servlet-class>com.cl.view.Error</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ManageUsers</servlet-name>
         <url-pattern>/ManageUsers</url-pattern>
@@ -34,5 +46,17 @@
     <servlet-mapping>
         <servlet-name>MainFrame</servlet-name>
         <url-pattern>/MainFrame</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteClServlet</servlet-name>
+        <url-pattern>/DeleteClServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OK</servlet-name>
+        <url-pattern>/OK</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Error</servlet-name>
+        <url-pattern>/Error</url-pattern>
     </servlet-mapping>
 </web-app>

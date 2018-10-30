@@ -7,7 +7,7 @@ public class User {
     private int id;
     private int grade;
     private String email;
-    private String getName() {
+    public String getName() {
         return name;
     }
 
