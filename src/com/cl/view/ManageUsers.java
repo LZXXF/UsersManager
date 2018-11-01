@@ -46,7 +46,8 @@ public class ManageUsers extends HttpServlet {
                         "</td><td>" + user.getName() +
                         "</td><td>" + user.getEmail() +
                         "</td><td>" + user.getGrade() +
-                        "</td><td><a onclick = 'return confirmOper();' href = '/UserManager/DeleteClServlet?id=" + user.getId() + "'>delete</a></td><td><a href = '#'>modify</a></td></tr>");
+                        "</td><td><a onclick = 'return confirmOper();' href = '/UserManager/UserClServlet?type=delete&id=" + user.getId() + "'>delete</a></td>" +
+                        "<td><a href = '/UserManager/UserClServlet?type=goToUpdateView&id=" + user.getId() + "'>modify</a></td></tr>");
             }
             out.println("</table>");
             if (pageNow != 1) {

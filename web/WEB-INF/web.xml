@@ -20,8 +20,8 @@
         <servlet-class>com.cl.view.ManageUsers</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>DeleteClServlet</servlet-name>
-        <servlet-class>com.cl.controller.DeleteClServlet</servlet-class>
+        <servlet-name>UserClServlet</servlet-name>
+        <servlet-class>com.cl.controller.UserClServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>OK</servlet-name>
@@ -30,6 +30,10 @@
     <servlet>
         <servlet-name>Error</servlet-name>
         <servlet-class>com.cl.view.Error</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateUserView</servlet-name>
+        <servlet-class>com.cl.view.UpdateUserView</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ManageUsers</servlet-name>
@@ -48,8 +52,8 @@
         <url-pattern>/MainFrame</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>DeleteClServlet</servlet-name>
-        <url-pattern>/DeleteClServlet</url-pattern>
+        <servlet-name>UserClServlet</servlet-name>
+        <url-pattern>/UserClServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>OK</servlet-name>
@@ -58,5 +62,10 @@
     <servlet-mapping>
         <servlet-name>Error</servlet-name>
         <url-pattern>/Error</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>UpdateUserView</servlet-name>
+        <url-pattern>/UpdateUserView</url-pattern>
     </servlet-mapping>
 </web-app>

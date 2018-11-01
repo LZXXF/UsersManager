@@ -80,4 +80,39 @@ public class UserService {
         }
         return b;
     }
+
+    //get user info by id
+    public User getUserById(String id) {
+        User user = new User();
+        String sql = "select * from users where id_number = ?";
+        String[] parameters = {id};
+        ResultSet rs = SqlHelper.executeQuery(sql, parameters);
+        try {
+            if (rs.next()) {
+                user.setId(rs.getInt(1));
+                user.setName(rs.getString(2));
+                user.setEmail(rs.getString(3));
+                user.setGrade(rs.getInt(4));
+                user.setPassword(rs.getString(5));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            SqlHelper.close(rs, SqlHelper.getPs(), SqlHelper.getCt());
+        }
+        return user;
+    }
+
+    //update user
+    public boolean updateUser(User user) {
+        boolean b = true;
+        String sql = "update users set username = ?, email = ?, grade = ?, password = ? where id_number = ?";
+        String[] parameters = {user.getName(), user.getEmail(), "" + user.getGrade(), user.getPassword(), "" + user.getId()};
+        try {
+            SqlHelper.executeUpdate(sql, parameters);
+        } catch (Exception e) {
+            b = false;
+        }
+        return b;
+    }
 }

@@ -11,6 +11,18 @@ public class User {
         return name;
     }
 
+    public User() {
+
+    }
+
+    public User(int id, String name, String email, int grade, String password) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.grade = grade;
+        this.password = password;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
